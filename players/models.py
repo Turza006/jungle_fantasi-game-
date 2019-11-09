@@ -8,7 +8,7 @@ class Players(models.Model):
     email = models.CharField(null=False,max_length=64)
     xp = models.IntegerField(null=False)
     coin = models.IntegerField(null=True)
-    image = models.ImageField(null=True)
+    image = models.ImageField(null=True,upload_to='images/')
     name = models.CharField(null=True,max_length=64)
     playing = models.IntegerField(default=1)
     country = models.CharField(null=False,max_length=15)
