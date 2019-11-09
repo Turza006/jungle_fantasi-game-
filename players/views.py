@@ -6,10 +6,11 @@ from .serializers import PlayersSerializer
 # Create your views here.
 
 class PlayersListAPI(APIView):
-    def get(self):
+    def get(self,request):
         try:
-            players = Players.objects.all()
-            json = PlayersSerializer(data=players, many=True)
+
+            _players = Players.objects.all()
+            json = PlayersSerializer(data=_players, many=True)
             json.is_valid()
             return Response(json.data, status=status.HTTP_200_OK)
         except BaseException as e:
