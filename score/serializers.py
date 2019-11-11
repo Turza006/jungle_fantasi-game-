@@ -1,9 +1,14 @@
 from rest_framework.serializers import ModelSerializer
 
-from .models import Players
+from .models import Score
 
 
-class PlayersSerializer(ModelSerializer):
+class ScoreSerializer(ModelSerializer):
     class Meta:
-        model = Players
+        model = Score
+        fields = '__all__'
+
+class ScoreDetailsSerializer(ModelSerializer):
+    class Meta:
+        model = Score
         fields = '__all__'

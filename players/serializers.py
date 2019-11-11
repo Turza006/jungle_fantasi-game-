@@ -7,3 +7,9 @@ class PlayersSerializer(ModelSerializer):
     class Meta:
         model = Players
         fields = '__all__'
+
+
+class PlayersDetailsSerializer(ModelSerializer):
+    class Meta:
+        model = Players
+        fields = '__all__'
